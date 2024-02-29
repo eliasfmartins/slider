@@ -88,7 +88,33 @@ header .menu {
     font-size: 6rem;
     margin: 0;
 }
-.slider .list .item.active{
+
+.slider .list .item.active {
     opacity: 1;
     z-index: 10;
 }
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+/* 
+  Animando o elemento usando a animação chamada "showContent":
+  - Duração de 0.5 segundos
+  - Atraso inicial de 0.7 segundos
+  - Função de temporização "ease-in-out" para aceleração e desaceleração suaves
+  - Uma única iteração da animação
+  - O estado final é mantido após a conclusão ("forwards")
+*/
