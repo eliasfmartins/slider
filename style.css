@@ -152,6 +152,7 @@ header .menu {
 }
 
 .thumbnail {
+    box-sizing: border-box;
     position: absolute;
     bottom: 50px;
     z-index: 11;
@@ -192,3 +193,16 @@ header .menu {
     inset: auto 10px 10px 10px;
 }
 
+@media screen and(max-width: 678px) {
+    .thumbnail {
+        justify-content: start;
+    }
+
+    .slider .list .item .content h2 {
+        font-size: 60px;
+    }
+
+    .arrows {
+        top: 10%;
+    }
+}
